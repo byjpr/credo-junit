@@ -1,21 +1,19 @@
 # CredoJunit
 
-**TODO: Add description**
+Convert Credo.json files into JUnit XML. This tool was primarily made to produce JUnit consumable tests reports for CircleCI.
+
+## Usage
+
+1. Add credo_junit to your mix.exs `{:credo_junit, git: "https://github.com/byjpr/credo_junit", only: [:dev, :test]}`
+2. Run Credo and save output to reports/credo.json `$ mix credo $1 --format json >> reports/credo.json`
+3. Convert credo.json to reports/credo.xml `mix credo_to_junit`
 
 ## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `credo_junit` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:credo_junit, "~> 0.1.0"}
+    {:credo_junit, git: "https://github.com/byjpr/credo_junit", only: [:dev, :test]}
   ]
 end
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/credo_junit](https://hexdocs.pm/credo_junit).
-

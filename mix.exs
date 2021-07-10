@@ -22,7 +22,7 @@ defmodule CredoJunit.MixProject do
   defp deps do
     [
       {:sobelow_junit,
-      git: "https://github.com/byjpr/sobelow-junit", only: [:dev, :test], runtime: false}
+       git: "https://github.com/byjpr/sobelow-junit", only: [:dev, :test], runtime: false},
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
       {:sobelow, "~> 0.7", only: [:dev, :test], runtime: false},
       {:jason, "~> 1.2.2"},
